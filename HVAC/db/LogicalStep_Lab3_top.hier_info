@@ -1,0 +1,90 @@
+|LogicalStep_Lab3_top
+clk_in => ~NO_FANOUT~
+pb[0] => ~NO_FANOUT~
+pb[1] => ~NO_FANOUT~
+pb[2] => ~NO_FANOUT~
+pb[3] => ~NO_FANOUT~
+sw[0] => Compx4:comparator.A[0]
+sw[1] => Compx4:comparator.A[1]
+sw[2] => Compx4:comparator.A[2]
+sw[3] => Compx4:comparator.A[3]
+sw[4] => Compx4:comparator.B[0]
+sw[5] => Compx4:comparator.B[1]
+sw[6] => Compx4:comparator.B[2]
+sw[7] => Compx4:comparator.B[3]
+leds[0] << Compx4:comparator.ALTB
+leds[1] << Compx4:comparator.AEQB
+leds[2] << Compx4:comparator.AGTB
+leds[3] << <GND>
+leds[4] << <GND>
+leds[5] << <GND>
+leds[6] << <GND>
+leds[7] << <GND>
+leds[8] << <GND>
+leds[9] << <GND>
+leds[10] << <GND>
+leds[11] << <GND>
+
+
+|LogicalStep_Lab3_top|Compx4:comparator
+A[0] => Compx1:bit0.A
+A[1] => Compx1:bit1.A
+A[2] => Compx1:bit2.A
+A[3] => Compx1:bit3.A
+B[0] => Compx1:bit0.B
+B[1] => Compx1:bit1.B
+B[2] => Compx1:bit2.B
+B[3] => Compx1:bit3.B
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:bit3
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => ALTB.IN1
+B => AEQB.IN1
+B => AGTB.IN1
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:bit2
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => ALTB.IN1
+B => AEQB.IN1
+B => AGTB.IN1
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:bit1
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => ALTB.IN1
+B => AEQB.IN1
+B => AGTB.IN1
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:bit0
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => ALTB.IN1
+B => AEQB.IN1
+B => AGTB.IN1
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+
+
